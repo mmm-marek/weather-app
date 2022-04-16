@@ -14,6 +14,7 @@ export const UserDataContext = createContext<UserDataContextType>({
     setSearchBy: () => null,
     searchHistoryData: [],
     setSearchHistoryData: () => null,
+    clearSearchData: () => null,
 });
 
 export const UserDataProvider = ({ children }: any) => {
@@ -23,6 +24,11 @@ export const UserDataProvider = ({ children }: any) => {
         DataForLayman[] | DataForMeteorologist[]
     >([]);
 
+    const clearSearchData = () => {
+        setSearchBy(SearchBy.NotChosen);
+        setSearchHistoryData([]);
+    };
+
     const value = {
         typeOfUser,
         setTypeOfUser,
@@ -30,6 +36,7 @@ export const UserDataProvider = ({ children }: any) => {
         setSearchBy,
         searchHistoryData,
         setSearchHistoryData,
+        clearSearchData,
     };
 
     return (

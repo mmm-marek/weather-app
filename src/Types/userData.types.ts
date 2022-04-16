@@ -32,4 +32,5 @@ export type UserDataContextType = {
     setSearchHistoryData: React.Dispatch<
         React.SetStateAction<DataForLayman[] | DataForMeteorologist[]>
     >;
+    clearSearchData: () => void;
 };
