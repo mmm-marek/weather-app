@@ -1,0 +1,10 @@
+.navigation-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.side-panels-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
