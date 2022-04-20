@@ -1,11 +1,7 @@
 import { createContext, useState } from "react";
 import SearchBy from "../Enums/searchBy.enum";
 import TypeOfUser from "../Enums/typeOfUser.enum";
-import {
-    DataForLayman,
-    DataForMeteorologist,
-    UserDataContextType,
-} from "../Types/userData.types";
+import { WeatherData, UserDataContextType } from "../Types/userData.types";
 
 export const UserDataContext = createContext<UserDataContextType>({
     typeOfUser: TypeOfUser.Layman,
@@ -20,9 +16,9 @@ export const UserDataContext = createContext<UserDataContextType>({
 export const UserDataProvider = ({ children }: any) => {
     const [typeOfUser, setTypeOfUser] = useState(TypeOfUser.Layman);
     const [searchBy, setSearchBy] = useState(SearchBy.NotChosen);
-    const [searchHistoryData, setSearchHistoryData] = useState<
-        DataForLayman[] | DataForMeteorologist[]
-    >([]);
+    const [searchHistoryData, setSearchHistoryData] = useState<WeatherData[]>(
+        []
+    );
 
     const clearSearchData = () => {
         setSearchBy(SearchBy.NotChosen);

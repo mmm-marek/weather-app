@@ -7,17 +7,13 @@ export interface PlaceData {
     city: string | null;
 }
 
-export interface DataForLayman {
+export interface WeatherData {
     id: string;
     place: PlaceData;
     temperature: string;
     windspeed: string;
     humidity: string;
     pressure: string;
-}
-
-export interface DataForMeteorologist {
-    laymanData: DataForLayman;
     windDirection: string;
     minTemperature: string;
     maxTemperature: string;
@@ -26,11 +22,9 @@ export interface DataForMeteorologist {
 export type UserDataContextType = {
     typeOfUser: TypeOfUser;
     searchBy: SearchBy;
-    searchHistoryData: DataForMeteorologist[] | DataForLayman[];
+    searchHistoryData: WeatherData[];
     setTypeOfUser: React.Dispatch<React.SetStateAction<TypeOfUser>>;
     setSearchBy: React.Dispatch<React.SetStateAction<SearchBy>>;
-    setSearchHistoryData: React.Dispatch<
-        React.SetStateAction<DataForLayman[] | DataForMeteorologist[]>
-    >;
+    setSearchHistoryData: React.Dispatch<React.SetStateAction<WeatherData[]>>;
     clearSearchData: () => void;
 };
