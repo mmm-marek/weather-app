@@ -2,6 +2,7 @@ import { useState, useContext } from "react";
 import { getDataFromOpenWeatherAPI } from "../../Utils/queryOpenWeather";
 import { UserDataContext } from "../../Context/userData.context";
 import Input from "../Input/Input.component";
+import { parseWeatherData } from "../../Utils/parseWeatherData";
 
 const SearchByCityForm = () => {
     const [searchField, setSearchField] = useState("");
@@ -13,10 +14,17 @@ const SearchByCityForm = () => {
 
     const handleSubmit = async (e: any) => {
         e.preventDefault();
-        let response = await getDataFromOpenWeatherAPI(searchBy, {
-            place: searchField,
-        });
-        console.log(response);
+        try {
+            let response = await getDataFromOpenWeatherAPI(searchBy, {
+                place: searchField,
+            });
+            const weatherData = parseWeatherData(response);
+            console.log(weatherData);
+            console.log(response);
+        } catch (e) {
+            setSearchField("");
+            alert("City not found.");
+        }
     };
 
     return (
@@ -29,6 +37,7 @@ const SearchByCityForm = () => {
                         name="city"
                         placeholder="city"
                         onChangeHandler={handleChange}
+                        value={searchField}
                     />
                 </label>
             </form>

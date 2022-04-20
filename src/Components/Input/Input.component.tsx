@@ -1,11 +1,18 @@
 type InputProps = {
     type: string;
     name: string;
+    value: string;
     placeholder: string;
     onChangeHandler: (e: any) => void;
 };
 
-const Input = ({ type, name, placeholder, onChangeHandler }: InputProps) => {
+const Input = ({
+    type,
+    name,
+    placeholder,
+    onChangeHandler,
+    value,
+}: InputProps) => {
     return (
         <>
             <input
@@ -13,6 +20,7 @@ const Input = ({ type, name, placeholder, onChangeHandler }: InputProps) => {
                 name={name}
                 placeholder={placeholder}
                 onChange={onChangeHandler}
+                value={value}
             />
         </>
     );

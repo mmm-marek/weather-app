@@ -2,9 +2,9 @@ import SearchBy from "../Enums/searchBy.enum";
 import TypeOfUser from "../Enums/typeOfUser.enum";
 
 export interface PlaceData {
-    longitude: string | null;
-    latitude: string | null;
-    city: string | null;
+    longitude: string;
+    latitude: string;
+    city: string;
 }
 
 export interface WeatherData {

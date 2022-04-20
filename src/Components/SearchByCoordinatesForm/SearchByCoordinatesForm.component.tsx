@@ -2,6 +2,7 @@ import { useState, useContext } from "react";
 import { getDataFromOpenWeatherAPI } from "../../Utils/queryOpenWeather";
 import { UserDataContext } from "../../Context/userData.context";
 import Input from "../Input/Input.component";
+import { parseWeatherData } from "../../Utils/parseWeatherData";
 
 const SearchByCoordinatesForm = () => {
     const [longitude, setLongitude] = useState("");
@@ -18,13 +19,21 @@ const SearchByCoordinatesForm = () => {
 
     const handleSubmit = async (e: any) => {
         e.preventDefault();
-        let response = await getDataFromOpenWeatherAPI(searchBy, {
-            place: {
-                longitude: longitude,
-                latitude: latitude,
-            },
-        });
-        console.log(response);
+        try {
+            let response = await getDataFromOpenWeatherAPI(searchBy, {
+                place: {
+                    longitude: longitude,
+                    latitude: latitude,
+                },
+            });
+            const weatherData = parseWeatherData(response);
+            console.log(weatherData);
+            console.log(response);
+        } catch (e) {
+            alert("Wrong coordinates entered.");
+            setLatitude("");
+            setLongitude("");
+        }
     };
 
     return (
@@ -37,12 +46,14 @@ const SearchByCoordinatesForm = () => {
                         name="longitude"
                         placeholder="longitude"
                         onChangeHandler={handleChangeLongitude}
+                        value={longitude}
                     />
                     <Input
                         type="text"
                         name="latitude"
                         placeholder="latitude"
                         onChangeHandler={handleChangeLatitude}
+                        value={latitude}
                     />
                 </label>
                 <input type="submit" hidden />
