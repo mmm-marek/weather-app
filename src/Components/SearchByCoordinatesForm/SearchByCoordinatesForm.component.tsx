@@ -1,6 +1,7 @@
 import { useState, useContext } from "react";
 import { getDataFromOpenWeatherAPI } from "../../Utils/queryOpenWeather";
 import { UserDataContext } from "../../Context/userData.context";
+import Input from "../Input/Input.component";
 
 const SearchByCoordinatesForm = () => {
     const [longitude, setLongitude] = useState("");
@@ -31,17 +32,17 @@ const SearchByCoordinatesForm = () => {
             <form onSubmit={handleSubmit}>
                 <label>
                     Will in rain on...
-                    <input
+                    <Input
                         type="text"
                         name="longitude"
                         placeholder="longitude"
-                        onChange={handleChangeLongitude}
+                        onChangeHandler={handleChangeLongitude}
                     />
-                    <input
+                    <Input
                         type="text"
                         name="latitude"
                         placeholder="latitude"
-                        onChange={handleChangeLatitude}
+                        onChangeHandler={handleChangeLatitude}
                     />
                 </label>
                 <input type="submit" hidden />
