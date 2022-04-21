@@ -10,10 +10,18 @@ const HomePage = () => {
 
     switch (searchBy) {
         case SearchBy.Coordinates: {
-            return <SearchByCoordinatesForm />;
+            return (
+                <div>
+                    <SearchByCoordinatesForm />
+                </div>
+            );
         }
         case SearchBy.City: {
-            return <SearchByCityForm />;
+            return (
+                <div>
+                    <SearchByCityForm />
+                </div>
+            );
         }
         default: {
             return <ChooseSearchMethodForm />;
