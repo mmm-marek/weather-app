@@ -13,6 +13,7 @@ const InfoPanel = ({ dataToDisplay }: InfoPanelProps) => {
     return (
         <div>
             <ul>
+                <li>Place: {dataToDisplay.place.city}</li>
                 <li>Temperature: {dataToDisplay.temperature}</li>
                 <li>Pressure: {dataToDisplay.pressure}</li>
                 <li>Humidity: {dataToDisplay.humidity}</li>
@@ -20,9 +21,10 @@ const InfoPanel = ({ dataToDisplay }: InfoPanelProps) => {
                 {typeOfUser === TypeOfUser.Meteorologist && (
                     <>
                         <li>Wind Direction: {dataToDisplay.windDirection}</li>
-                        <li>Place: {dataToDisplay.place.city}</li>
                         <li>Max Temperature: {dataToDisplay.maxTemperature}</li>
                         <li>Min Temperature: {dataToDisplay.minTemperature}</li>
+                        <li>Latitude: {dataToDisplay.place.latitude}</li>
+                        <li>Longitude: {dataToDisplay.place.longitude}</li>
                     </>
                 )}
             </ul>

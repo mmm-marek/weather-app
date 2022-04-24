@@ -1,7 +1,15 @@
+import { useContext } from "react";
+import InfoPanel from "../../Components/InfoPanel/InfoPanel.component";
+import { UserDataContext } from "../../Context/userData.context";
+
 const HistoryPage = () => {
+    const { searchHistoryData } = useContext(UserDataContext);
+
     return (
         <div>
-            <h1>HISTORY PAGE</h1>
+            {searchHistoryData.map((el) => (
+                <InfoPanel dataToDisplay={el} key={el.id} />
+            ))}
         </div>
     );
 };
