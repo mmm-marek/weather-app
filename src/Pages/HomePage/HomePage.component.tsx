@@ -19,7 +19,13 @@ const HomePage = () => {
             ) : (
                 <SearchByCoordinatesForm />
             )}
-            {searchHistoryData.length > 0 && <InfoPanel />}
+            {searchHistoryData.length > 0 && (
+                <InfoPanel
+                    dataToDisplay={
+                        searchHistoryData[searchHistoryData.length - 1]
+                    }
+                />
+            )}
         </div>
     );
 };
