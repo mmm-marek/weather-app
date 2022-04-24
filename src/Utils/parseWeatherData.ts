@@ -1,7 +1,9 @@
+import { v4 as uuid } from "uuid";
+
 import { WeatherData } from "../Types/userData.types";
 
 export const parseWeatherData = (responseFromServer: any): WeatherData => ({
-    id: responseFromServer.data.id,
+    id: uuid(),
     humidity: responseFromServer.data.main.humidity,
     maxTemperature: responseFromServer.data.main.temp_max,
     minTemperature: responseFromServer.data.main.temp_min,

@@ -6,7 +6,8 @@ import { parseWeatherData } from "../../Utils/parseWeatherData";
 
 const SearchByCityForm = () => {
     const [searchField, setSearchField] = useState("");
-    const { searchBy } = useContext(UserDataContext);
+    const { searchBy, setSearchHistoryData, searchHistoryData } =
+        useContext(UserDataContext);
 
     const handleChange = (e: any) => {
         setSearchField(e.target.value);
@@ -19,8 +20,7 @@ const SearchByCityForm = () => {
                 place: searchField,
             });
             const weatherData = parseWeatherData(response);
-            console.log(weatherData);
-            console.log(response);
+            setSearchHistoryData([...searchHistoryData, weatherData]);
         } catch (e) {
             setSearchField("");
             alert("City not found.");

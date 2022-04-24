@@ -1,7 +1,6 @@
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { UserDataContext } from "../../Context/userData.context";
-import SearchBy from "../../Enums/searchBy.enum";
 import TypeOfUser from "../../Enums/typeOfUser.enum";
 
 const Footer = () => {
@@ -15,6 +14,9 @@ const Footer = () => {
                 ? TypeOfUser.Meteorologist
                 : TypeOfUser.Layman
         );
+    };
+
+    const handleReset = () => {
         clearSearchData();
         navigate("/");
     };
@@ -25,6 +27,7 @@ const Footer = () => {
                 {typeOfUser === TypeOfUser.Layman ? "LAYMAN" : "METEOROLOGIST"}
             </span>
             <span onClick={handleClick}> SWITCH </span>
+            <span onClick={handleReset}>RESET</span>
         </div>
     );
 };

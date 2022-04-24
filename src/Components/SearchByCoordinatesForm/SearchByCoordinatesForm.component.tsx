@@ -7,7 +7,8 @@ import { parseWeatherData } from "../../Utils/parseWeatherData";
 const SearchByCoordinatesForm = () => {
     const [longitude, setLongitude] = useState("");
     const [latitude, setLatitude] = useState("");
-    const { searchBy } = useContext(UserDataContext);
+    const { searchBy, searchHistoryData, setSearchHistoryData } =
+        useContext(UserDataContext);
 
     const handleChangeLongitude = (e: any) => {
         setLongitude(e.target.value);
@@ -27,8 +28,7 @@ const SearchByCoordinatesForm = () => {
                 },
             });
             const weatherData = parseWeatherData(response);
-            console.log(weatherData);
-            console.log(response);
+            setSearchHistoryData([...searchHistoryData, weatherData]);
         } catch (e) {
             alert("Wrong coordinates entered.");
             setLatitude("");
