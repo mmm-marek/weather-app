@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { UserDataContext } from "../../Context/userData.context";
 import SearchBy from "../../Enums/searchBy.enum";
+import "./ChooseSearchMethodForm.styles.scss";
 
 const ChooseSearchMethodForm = () => {
     const { setSearchBy } = useContext(UserDataContext);

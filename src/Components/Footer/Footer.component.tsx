@@ -30,7 +30,10 @@ const Footer = () => {
                         ? "LAYMAN"
                         : "METEOROLOGIST"}
                 </span>
-                <span onClick={handleClick}> SWITCH </span>
+                <span className="switch" onClick={handleClick}>
+                    {" "}
+                    SWITCH{" "}
+                </span>
             </div>
             <span className="reset" onClick={handleReset}>
                 RESET

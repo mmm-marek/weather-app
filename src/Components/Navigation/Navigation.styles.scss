@@ -1,13 +1,14 @@
 .navigation-container {
-    height: 5%;
     display: flex;
     justify-content: space-between;
+    padding-top: 10px;
+    height: 5vh;
     font-family: "PT Sans Narrow";
     font-size: 18px;
     letter-spacing: 1px;
 
     .logotype {
-        margin: 10px 120px 20px;
+        margin-left: 120px;
     }
 
     .nav-link {
@@ -17,7 +18,7 @@
     }
 
     .links-container {
-        margin: 10px 120px 20px;
+        margin-right: 120px;
         width: 25%;
         display: flex;
         justify-content: space-between;

@@ -1,8 +1,6 @@
 .footer-container {
-    position: absolute;
-    bottom: 0;
     width: 100%;
-    height: 5%;
+    height: 5vh;
     margin-bottom: 10px;
     font-family: "PT Sans Narrow";
     letter-spacing: 1px;
@@ -18,5 +16,10 @@
 
     .reset {
         margin-right: 120px;
+        cursor: pointer;
+    }
+
+    .switch {
+        cursor: pointer;
     }
 }
