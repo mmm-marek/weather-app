@@ -1,0 +1,13 @@
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 120px 20px;
+    font-family: "PT Sans Narrow";
+    letter-spacing: 1px;
+
+    .user-type-container {
+        width: 10%;
+        display: flex;
+        justify-content: space-between;
+    }
+}

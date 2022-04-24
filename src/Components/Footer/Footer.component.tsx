@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { UserDataContext } from "../../Context/userData.context";
 import TypeOfUser from "../../Enums/typeOfUser.enum";
+import "./Footer.styles.scss";
 
 const Footer = () => {
     const { typeOfUser, setTypeOfUser, clearSearchData } =
@@ -22,13 +23,17 @@ const Footer = () => {
     };
 
     return (
-        <div>
-            <span>
-                {typeOfUser === TypeOfUser.Layman ? "LAYMAN" : "METEOROLOGIST"}
-            </span>
-            <span onClick={handleClick}> SWITCH </span>
+        <footer className="footer-container">
+            <div className="user-type-container">
+                <span>
+                    {typeOfUser === TypeOfUser.Layman
+                        ? "LAYMAN"
+                        : "METEOROLOGIST"}
+                </span>
+                <span onClick={handleClick}> SWITCH </span>
+            </div>
             <span onClick={handleReset}>RESET</span>
-        </div>
+        </footer>
     );
 };
 
