@@ -1,11 +1,12 @@
 .footer-container {
     width: 100%;
     height: 5vh;
-    margin-bottom: 10px;
     font-family: "PT Sans Narrow";
     letter-spacing: 1px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    color: rgb(159, 159, 159);
 
     .user-type-container {
         margin-left: 120px;

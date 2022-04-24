@@ -1,8 +1,31 @@
-.search-method-form-container {
-    h3 {
-        margin: auto;
-    }
+.search-method-component-container {
     height: 85vh;
-    background-color: red;
     font-family: "PT Sans Narrow";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .methods-container {
+        height: 20%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        button {
+            font-size: large;
+            font-family: "PT Sans Narrow";
+            letter-spacing: 1px;
+            width: 250px;
+            height: 50px;
+            border: 2px solid white;
+            border-radius: 25px;
+            opacity: 30%;
+            transition-duration: 0.4s;
+            cursor: pointer;
+
+            &:hover {
+                opacity: 60%;
+            }
+        }
+    }
 }

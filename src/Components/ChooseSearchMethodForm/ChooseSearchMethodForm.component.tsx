@@ -11,12 +11,13 @@ const ChooseSearchMethodForm = () => {
     };
 
     return (
-        <div className="search-method-form-container">
-            <h3>Search by...</h3>
+        <div className="search-method-component-container">
             <div className="methods-container">
-                <button onClick={() => handleClick(SearchBy.City)}>City</button>
+                <button onClick={() => handleClick(SearchBy.City)}>
+                    SEARCH BY CITY
+                </button>
                 <button onClick={() => handleClick(SearchBy.Coordinates)}>
-                    Coordinates
+                    SEARCH BY COORDINATES
                 </button>
             </div>
         </div>
