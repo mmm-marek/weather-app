@@ -42,7 +42,7 @@ const SearchByCoordinatesForm = () => {
                 <label>
                     Will in rain on...
                     <Input
-                        type="text"
+                        type="number"
                         name="longitude"
                         placeholder="longitude"
                         onChangeHandler={handleChangeLongitude}

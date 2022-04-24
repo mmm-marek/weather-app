@@ -3,6 +3,7 @@ import { getDataFromOpenWeatherAPI } from "../../Utils/queryOpenWeather";
 import { UserDataContext } from "../../Context/userData.context";
 import Input from "../Input/Input.component";
 import { parseWeatherData } from "../../Utils/parseWeatherData";
+import "./SearchByCityForm.styles.scss";
 
 const SearchByCityForm = () => {
     const [searchField, setSearchField] = useState("");
@@ -28,14 +29,14 @@ const SearchByCityForm = () => {
     };
 
     return (
-        <div>
+        <div className="search-by-city-container">
             <form onSubmit={handleSubmit}>
                 <label>
                     Will it rain in...
                     <Input
                         type="text"
                         name="city"
-                        placeholder="city"
+                        placeholder="London"
                         onChangeHandler={handleChange}
                         value={searchField}
                     />

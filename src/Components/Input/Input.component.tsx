@@ -1,3 +1,5 @@
+import "./Input.styles.scss";
+
 type InputProps = {
     type: string;
     name: string;
@@ -21,6 +23,7 @@ const Input = ({
                 placeholder={placeholder}
                 onChange={onChangeHandler}
                 value={value}
+                spellCheck="false"
             />
         </>
     );

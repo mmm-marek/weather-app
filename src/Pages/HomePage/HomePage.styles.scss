@@ -1,4 +1,7 @@
 .homepage-container {
-    background-color: red;
-    width: 90%;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
