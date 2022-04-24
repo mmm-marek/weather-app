@@ -32,7 +32,9 @@ const Footer = () => {
                 </span>
                 <span onClick={handleClick}> SWITCH </span>
             </div>
-            <span onClick={handleReset}>RESET</span>
+            <span className="reset" onClick={handleReset}>
+                RESET
+            </span>
         </footer>
     );
 };

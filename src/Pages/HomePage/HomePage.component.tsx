@@ -5,6 +5,7 @@ import SearchByCityForm from "../../Components/SearchByCityForm/SearchByCityForm
 import SearchByCoordinatesForm from "../../Components/SearchByCoordinatesForm/SearchByCoordinatesForm.component";
 import { UserDataContext } from "../../Context/userData.context";
 import SearchBy from "../../Enums/searchBy.enum";
+import "./HomePage.styles.scss";
 
 const HomePage = () => {
     const { searchBy, searchHistoryData } = useContext(UserDataContext);
@@ -13,7 +14,7 @@ const HomePage = () => {
         return <ChooseSearchMethodForm />;
     }
     return (
-        <div>
+        <div className="homepage-container">
             {searchBy === SearchBy.City ? (
                 <SearchByCityForm />
             ) : (
