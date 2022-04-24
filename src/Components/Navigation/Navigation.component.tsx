@@ -7,9 +7,20 @@ const Navigation = () => {
     return (
         <Fragment>
             <div className="navigation-container">
-                <Link to="/"> SILVER RAIN </Link>
-                <Link to="/"> HOMEPAGE </Link>
-                <Link to="/history-page"> HISTORY PAGE </Link>
+                <Link className="nav-link logotype" to="/">
+                    {" "}
+                    SILVER RAIN{" "}
+                </Link>
+                <div className="links-container">
+                    <Link className="nav-link" to="/">
+                        {" "}
+                        HOMEPAGE{" "}
+                    </Link>
+                    <Link className="nav-link" to="/history-page">
+                        {" "}
+                        HISTORY PAGE{" "}
+                    </Link>
+                </div>
             </div>
             <Outlet />
             <Footer />

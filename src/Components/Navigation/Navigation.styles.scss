@@ -1,6 +1,25 @@
 .navigation-container {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    font-family: "PT Sans Narrow";
+    font-size: 18px;
+
+    .logotype {
+        margin: 5px 120px 20px;
+    }
+
+    .nav-link {
+        text-decoration: none;
+        cursor: pointer;
+        color: black;
+    }
+
+    .links-container {
+        margin: 5px 120px 20px;
+        width: 25%;
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
 .side-panels-container {
