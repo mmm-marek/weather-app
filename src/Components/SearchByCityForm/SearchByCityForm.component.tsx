@@ -6,9 +6,14 @@ import { parseWeatherData } from "../../Utils/parseWeatherData";
 import "./SearchByCityForm.styles.scss";
 
 const SearchByCityForm = () => {
-    const [searchField, setSearchField] = useState("");
     const { searchBy, setSearchHistoryData, searchHistoryData } =
         useContext(UserDataContext);
+    const lastSearchedCity =
+        searchHistoryData.length > 0
+            ? searchHistoryData[searchHistoryData.length - 1].place.city
+            : "";
+
+    const [searchField, setSearchField] = useState(lastSearchedCity);
 
     const handleChange = (e: any) => {
         setSearchField(e.target.value);

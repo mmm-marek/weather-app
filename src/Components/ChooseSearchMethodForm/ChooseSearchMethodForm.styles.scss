@@ -19,12 +19,14 @@
             height: 50px;
             border: 2px solid white;
             border-radius: 25px;
-            opacity: 30%;
+            opacity: 60%;
+            background: transparent;
             transition-duration: 0.4s;
             cursor: pointer;
+            color: white;
 
             &:hover {
-                opacity: 60%;
+                opacity: 90%;
             }
         }
     }
