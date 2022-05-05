@@ -38,8 +38,8 @@ const DataRow = (props: WeatherData) => {
             {typeOfUser === TypeOfUser.Meteorologist && (
                 <>
                     <span>{props.windDirection}</span>
-                    <span>{props.maxTemperature}</span>
-                    <span>{props.minTemperature}</span>
+                    <span>{props.maxTemperature} °C</span>
+                    <span>{props.minTemperature} °C</span>
                     <span>{props.place.latitude}</span>
                     <span>{props.place.longitude}</span>
                 </>
