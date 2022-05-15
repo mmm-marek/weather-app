@@ -3,6 +3,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    overflow: hidden;
+
     .content-container {
         display: flex;
         flex-direction: column;
@@ -13,11 +15,11 @@
         backdrop-filter: blur(25px);
 
         .search-info-container {
-            padding-top: 15vh;
+            padding-top: 10vh;
         }
     }
 
     .info-banner {
-        padding-left: 120px;
+        padding-left: 20%;
     }
 }

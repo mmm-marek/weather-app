@@ -1,14 +1,17 @@
 .footer-container {
     width: 100%;
+    padding-bottom: 1vh;
+    padding-top: 1vh;
     font-family: "PT Sans Narrow";
     letter-spacing: 1px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: rgb(159, 159, 159);
+    border-top: 1px solid black;
 
     .user-type-container {
-        width: 50%;
+        width: 55%;
         display: flex;
         justify-content: space-between;
     }

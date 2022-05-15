@@ -1,8 +1,8 @@
 .navigation-container {
     display: flex;
     justify-content: space-between;
-    margin-top: 10px;
-    height: 3vh;
+    padding-top: 1vh;
+    height: 4vh;
     font-family: "PT Sans Narrow";
     font-size: 18px;
     letter-spacing: 1px;
@@ -22,5 +22,6 @@
         width: 22%;
         display: flex;
         justify-content: space-between;
+        border-bottom: 1px solid black;
     }
 }

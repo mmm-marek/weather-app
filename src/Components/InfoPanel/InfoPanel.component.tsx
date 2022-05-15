@@ -19,7 +19,6 @@ const InfoPanelLine = ({ label, dataToDisplay }: InfoPanelLineProps) => (
             <span>{label}:</span>
             <span>{dataToDisplay}</span>
         </li>
-        <hr></hr>
     </>
 );
 
