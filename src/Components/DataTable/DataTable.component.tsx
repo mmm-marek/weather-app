@@ -49,7 +49,12 @@ const DataRow = (props: WeatherData) => {
 };
 
 const DataTable = () => {
-    const { searchHistoryData } = useContext(UserDataContext);
+    const { searchHistoryData, clearSearchData } = useContext(UserDataContext);
+
+    const handleDelete = () => {
+        clearSearchData();
+    };
+
     return (
         <div className="data-table-container">
             <TableHeader />
@@ -59,6 +64,9 @@ const DataTable = () => {
                     <DataRow {...el} />
                 ))}
             </div>
+            <span className="delete" onClick={handleDelete}>
+                DELETE
+            </span>
         </div>
     );
 };

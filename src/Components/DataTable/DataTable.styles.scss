@@ -45,4 +45,13 @@
         -ms-overflow-style: none; /* IE and Edge */
         scrollbar-width: none; /* Firefox */
     }
+
+    .delete {
+        font-family: "PT Sans Narrow";
+        letter-spacing: 1px;
+        align-self: flex-end;
+        padding-right: 10px;
+        color: rgb(212, 212, 212);
+        cursor: pointer;
+    }
 }
