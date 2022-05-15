@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import ChooseSearchMethodForm from "../../Components/ChooseSearchMethodForm/ChooseSearchMethodForm.component";
+import Footer from "../../Components/Footer/Footer.component";
 import InfoBanner from "../../Components/InfoBanner/InfoBanner.component";
 import InfoPanel from "../../Components/InfoPanel/InfoPanel.component";
 import SearchByCityForm from "../../Components/SearchByCityForm/SearchByCityForm.component";
@@ -10,6 +11,7 @@ import "./HomePage.styles.scss";
 
 const HomePage = () => {
     const { searchBy, searchHistoryData } = useContext(UserDataContext);
+
     const lastSearch =
         searchHistoryData.length > 0
             ? searchHistoryData[searchHistoryData.length - 1]
@@ -30,16 +32,19 @@ const HomePage = () => {
                 )}
             </div>
             <div className="content-container">
-                {searchBy === SearchBy.City ? (
-                    <SearchByCityForm />
-                ) : (
-                    <SearchByCoordinatesForm />
-                )}
-                <div className="info-panel-container">
-                    {lastSearch !== null && (
-                        <InfoPanel dataToDisplay={lastSearch} />
+                <div className="search-info-container">
+                    {searchBy === SearchBy.City ? (
+                        <SearchByCityForm />
+                    ) : (
+                        <SearchByCoordinatesForm />
                     )}
+                    <div className="info-panel-container">
+                        {lastSearch !== null && (
+                            <InfoPanel dataToDisplay={lastSearch} />
+                        )}
+                    </div>
                 </div>
+                <Footer />
             </div>
         </div>
     );

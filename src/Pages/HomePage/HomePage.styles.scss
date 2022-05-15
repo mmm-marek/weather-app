@@ -1,10 +1,20 @@
 .homepage-container {
-    height: 85vh;
+    height: 95vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
     .content-container {
-        margin-right: 120px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        padding-right: 120px;
+        padding-left: 120px;
+        backdrop-filter: blur(25px);
+
+        .search-info-container {
+            padding-top: 15vh;
+        }
     }
 
     .info-banner {

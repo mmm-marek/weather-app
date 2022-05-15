@@ -1,6 +1,5 @@
 import { Fragment } from "react";
 import { Link, Outlet } from "react-router-dom";
-import Footer from "../Footer/Footer.component";
 import "./Navigation.styles.scss";
 
 const Navigation = () => {
@@ -20,7 +19,6 @@ const Navigation = () => {
                 </div>
             </div>
             <Outlet />
-            <Footer />
         </Fragment>
     );
 };
