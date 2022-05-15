@@ -1,0 +1,33 @@
+$font-color: rgb(201, 201, 201);
+
+.info-banner-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 55px;
+    border: 1px solid rgb(66, 66, 66);
+    backdrop-filter: blur(18px);
+    background-color: rgba(0, 0, 0, 0.3);
+    min-width: 180px;
+
+    hr {
+        width: 100%;
+    }
+
+    .info-banner-city {
+        font-family: "Dosis";
+        color: $font-color;
+        font-size: 3em;
+    }
+    .info-banner-temp {
+        font-family: "Dosis";
+        color: $font-color;
+        font-size: 8em;
+    }
+    .info-banner-desc {
+        font-family: "Dosis";
+        font-size: 2em;
+        color: $font-color;
+    }
+}

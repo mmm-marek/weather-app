@@ -13,7 +13,13 @@ export const parseWeatherData = (responseFromServer: any): WeatherData => ({
         longitude: responseFromServer.data.coord.lon,
     },
     pressure: responseFromServer.data.main.pressure,
-    temperature: responseFromServer.data.main.temp,
+    temperature: parseFloat(responseFromServer.data.main.temp)
+        .toFixed(0)
+        .toString(),
     windDirection: responseFromServer.data.wind.deg,
     windspeed: responseFromServer.data.wind.speed,
+    description:
+        responseFromServer.data.weather.length > 0
+            ? responseFromServer.data.weather[0].description
+            : null,
 });

@@ -17,6 +17,7 @@ export interface WeatherData {
     windDirection: string;
     minTemperature: string;
     maxTemperature: string;
+    description: string;
 }
 
 export type UserDataContextType = {

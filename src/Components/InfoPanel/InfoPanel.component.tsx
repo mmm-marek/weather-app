@@ -14,17 +14,20 @@ type InfoPanelLineProps = {
 };
 
 const InfoPanelLine = ({ label, dataToDisplay }: InfoPanelLineProps) => (
-    <li>
-        <span>{label}:</span>
-        <span>{dataToDisplay}</span>
-    </li>
+    <>
+        <li>
+            <span>{label}:</span>
+            <span>{dataToDisplay}</span>
+        </li>
+        <hr></hr>
+    </>
 );
 
 const InfoPanel = ({ dataToDisplay }: InfoPanelProps) => {
     const { typeOfUser } = useContext(UserDataContext);
 
     return (
-        <div className="info-panel-container">
+        <div className="info-panel">
             <ul>
                 <InfoPanelLine
                     label="Place"
@@ -32,7 +35,7 @@ const InfoPanel = ({ dataToDisplay }: InfoPanelProps) => {
                 />
                 <InfoPanelLine
                     label="Temperature"
-                    dataToDisplay={dataToDisplay.temperature}
+                    dataToDisplay={dataToDisplay.temperature + "°"}
                 />
                 <InfoPanelLine
                     label="Pressure"
@@ -40,11 +43,11 @@ const InfoPanel = ({ dataToDisplay }: InfoPanelProps) => {
                 />
                 <InfoPanelLine
                     label="Humidity"
-                    dataToDisplay={dataToDisplay.humidity}
+                    dataToDisplay={dataToDisplay.humidity + " %"}
                 />
                 <InfoPanelLine
                     label="Wind Speed"
-                    dataToDisplay={dataToDisplay.windspeed}
+                    dataToDisplay={dataToDisplay.windspeed + " km/h"}
                 />
                 {typeOfUser === TypeOfUser.Meteorologist && (
                     <>
@@ -54,11 +57,11 @@ const InfoPanel = ({ dataToDisplay }: InfoPanelProps) => {
                         />
                         <InfoPanelLine
                             label="Max Temperature"
-                            dataToDisplay={dataToDisplay.maxTemperature}
+                            dataToDisplay={dataToDisplay.maxTemperature + "°"}
                         />
                         <InfoPanelLine
                             label="Min Temperature"
-                            dataToDisplay={dataToDisplay.minTemperature}
+                            dataToDisplay={dataToDisplay.minTemperature + "°"}
                         />
                         <InfoPanelLine
                             label="Latitude"
