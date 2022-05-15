@@ -37,7 +37,7 @@ const SearchByCityForm = () => {
         <div className="search-by-city-container">
             <form onSubmit={handleSubmit}>
                 <label>
-                    Will it rain in...
+                    <span className="city-text">Will it rain in...</span>
                     <Input
                         type="text"
                         name="city"

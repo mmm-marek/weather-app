@@ -3,6 +3,7 @@ import { getDataFromOpenWeatherAPI } from "../../Utils/queryOpenWeather";
 import { UserDataContext } from "../../Context/userData.context";
 import Input from "../Input/Input.component";
 import { parseWeatherData } from "../../Utils/parseWeatherData";
+import "./SearchByCoordinates.styles.scss";
 
 const SearchByCoordinatesForm = () => {
     const [longitude, setLongitude] = useState("");
@@ -40,7 +41,7 @@ const SearchByCoordinatesForm = () => {
         <div>
             <form onSubmit={handleSubmit}>
                 <label>
-                    Will in rain on...
+                    <span className="coordinates-text">Will it rain on...</span>
                     <Input
                         type="number"
                         name="longitude"
