@@ -49,10 +49,11 @@ const DataRow = (props: WeatherData) => {
 };
 
 const DataTable = () => {
-    const { searchHistoryData, clearSearchData } = useContext(UserDataContext);
+    const { searchHistoryData, clearSearchHistoryData } =
+        useContext(UserDataContext);
 
     const handleDelete = () => {
-        clearSearchData();
+        clearSearchHistoryData();
     };
 
     return (

@@ -28,4 +28,5 @@ export type UserDataContextType = {
     setSearchBy: React.Dispatch<React.SetStateAction<SearchBy>>;
     setSearchHistoryData: React.Dispatch<React.SetStateAction<WeatherData[]>>;
     clearSearchData: () => void;
+    clearSearchHistoryData: () => void;
 };

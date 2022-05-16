@@ -11,6 +11,7 @@ export const UserDataContext = createContext<UserDataContextType>({
     searchHistoryData: [],
     setSearchHistoryData: () => null,
     clearSearchData: () => null,
+    clearSearchHistoryData: () => null,
 });
 
 export const UserDataProvider = ({ children }: any) => {
@@ -25,6 +26,10 @@ export const UserDataProvider = ({ children }: any) => {
         setSearchHistoryData([]);
     };
 
+    const clearSearchHistoryData = () => {
+        setSearchHistoryData([]);
+    };
+
     const value = {
         typeOfUser,
         setTypeOfUser,
@@ -33,6 +38,7 @@ export const UserDataProvider = ({ children }: any) => {
         searchHistoryData,
         setSearchHistoryData,
         clearSearchData,
+        clearSearchHistoryData,
     };
 
     return (

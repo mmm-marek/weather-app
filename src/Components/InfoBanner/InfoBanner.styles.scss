@@ -8,9 +8,10 @@ $font-family: "Dosis";
     align-items: center;
     padding: 65px;
     border: 1px solid rgb(66, 66, 66);
-    border-radius: 15px 50px;
-    backdrop-filter: blur(18px);
-    min-width: 180px;
+    border-radius: 5% 50% 50% 50%;
+    backdrop-filter: blur(30px);
+    min-width: 300px;
+    overflow: hidden;
 
     hr {
         width: 100%;
